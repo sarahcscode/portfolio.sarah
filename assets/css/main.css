@@ -1698,6 +1698,9 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
+.pricing{
+  background-color:#f8f5f4;
+}
 .pricing .pricing-card {
   height: 100%;
   padding: 2rem;
@@ -1713,12 +1716,12 @@ section,
 
 .pricing .pricing-card.popular {
   background: #F8E1CF;
-  color:  #763F21;
+  color:  black;
 }
 
 .pricing .pricing-card.popular h3,
 .pricing .pricing-card.popular h4 {
-  color: #763F21;
+  color: black;
 }
 
 .pricing .pricing-card.popular .price .currency,
@@ -1728,11 +1731,11 @@ section,
 }
 
 .pricing .pricing-card.popular .features-list li {
-  color: #763F21;
+  color: black;
 }
 
 .pricing .pricing-card.popular .features-list li i {
-  color:#763F21;
+  color: #763F21;
 }
 
 .pricing .pricing-card.popular .btn-light {
