@@ -10,7 +10,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #D2A27A; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -20,9 +20,6 @@
   --nav-color: #212529;  /* The default color of the main navmenu links */
   --nav-hover-color: #0d83fd; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0d83fd; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -33,10 +30,10 @@
 }
 
 .dark-background {
-  --background-color: #0d83fd;
+  --background-color: #763F21;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #409dfd;
+  --surface-color: #D2A27A;
   --contrast-color: #ffffff;
 }
 
@@ -1976,18 +1973,33 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.info-item .content p a {
+  color: inherit; /* Mantém a cor do texto padrão */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  font-weight: inherit; /* Herda o peso da fonte */
+  font-size: inherit; /* Mantém o tamanho da fonte */
+}
+
+.info-item .content p a:hover {
+  color: color-mix(in srgb, var(--contrast-color), transparent 50%);/* Adiciona um sublinhado ao passar o mouse */
+}
+
+.contact {
+  background: linear-gradient(135deg, color-mix(in srgb,#763F21, transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+}
+
 .contact .info-box {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: #F8E1CF;
+  color: black;
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
 }
 
 .contact .info-box h3 {
-  color: var(--contrast-color);
+  color: #763F21;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 767.98px) {
@@ -2024,7 +2036,7 @@ section,
 .contact .info-item .icon-box {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  background-color: color-mix(in srgb,#763F21, transparent 75%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2039,11 +2051,11 @@ section,
 }
 
 .contact .info-item:hover .icon-box {
-  background-color: color-mix(in srgb, var(--contrast-color), transparent 70%);
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
 }
 
 .contact .info-item .content h4 {
-  color: var(--contrast-color);
+  color: black;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -2058,74 +2070,6 @@ section,
   margin-bottom: 0;
 }
 
-.contact .contact-form {
-  background-color: var(--surface-color);
-  padding: 3rem;
-  border-radius: 1rem;
-  height: 100%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
-}
-
-@media (max-width: 992px) {
-  .contact .contact-form {
-    padding: 1.5rem;
-  }
-}
-
-.contact .contact-form h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .contact .contact-form h3 {
-    font-size: 1.75rem;
-  }
-}
-
-.contact .contact-form p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  margin-bottom: 2rem;
-}
-
-.contact .contact-form .form-control,
-.contact .contact-form .form-select {
-  padding: 0.875rem 1.25rem;
-  border-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 0.5rem;
-  background-color: color-mix(in srgb, var(--surface-color) 90%, white 5%);
-  color: var(--default-color);
-}
-
-.contact .contact-form .form-control:focus,
-.contact .contact-form .form-select:focus {
-  box-shadow: none;
-  border-color: var(--accent-color);
-}
-
-.contact .contact-form .form-control::placeholder,
-.contact .contact-form .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.contact .contact-form .btn {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: 0.3s;
-}
-
-.contact .contact-form .btn i {
-  font-size: 1.25rem;
-}
-
-.contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
-}
 
 /*--------------------------------------------------------------
 # Service Details Section
