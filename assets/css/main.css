@@ -1064,6 +1064,7 @@ section,
   background-color: #fdeded;
 }
 
+
 /*--------------------------------------------------------------
 # Features 2 Section
 --------------------------------------------------------------*/
@@ -1124,6 +1125,16 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services .container {
+  display: flex;
+  flex-direction: column; /* Mantém as divs uma em cima da outra */
+  align-items: center; /* Centraliza no meio da tela */
+  gap: 20px; /* Adiciona espaço entre as divs */
+  justify-content: center; /* Centraliza verticalmente */
+}
+.services{
+  background-color:#f8f5f4;
+}
 .services .service-card {
   height: 100%;
   padding: 30px;
@@ -1154,7 +1165,7 @@ section,
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: var(--accent-color);
+  color: #C56869;
   font-size: 28px;
   transition: all 0.3s ease;
   line-height: 1;
@@ -1180,15 +1191,6 @@ section,
   color: var(--accent-color);
   font-weight: 500;
   transition: all 0.3s ease;
-}
-
-.services .service-card .read-more i {
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
-
-.services .service-card .read-more:hover i {
-  transform: translateX(5px);
 }
 
 /*--------------------------------------------------------------
